@@ -32,4 +32,15 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_reclamation">ReclamationActivity</string>
     <string name="title_activity_gps">GPSActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_add_purchase">AddPurchaseActivity</string>
+    <string name="title_activity_menu__principal">Menu_PrincipalActivity</string>
+    <string name="title_activity_map_family">MapFamilyActivity</string>
+    <string-array name="place_names">
+        <item>Magazin</item>
+        <item>Pharmacie</item>
+        <item>Librairie</item>
+        <item>Boutique</item>
+
+    </string-array>
 </resources>

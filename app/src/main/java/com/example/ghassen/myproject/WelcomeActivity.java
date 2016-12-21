@@ -52,8 +52,7 @@ public class WelcomeActivity extends AppCompatActivity
             public void onClick(View v) {
 
 
-                Intent ToReclamation = new Intent(WelcomeActivity.this, ReclamationActivity.class);
-                startActivity(ToReclamation);
+
             }
         });
     }

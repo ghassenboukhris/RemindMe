@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,23 +11,18 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.List;
 
-public class MapActivity extends AppCompatActivity {
-
+public class MapFamilyActivity extends AppCompatActivity {
 
     MarkerOptions markerOptions;
     LatLng latLng;
@@ -43,7 +37,7 @@ public class MapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_map_family);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -56,9 +50,9 @@ public class MapActivity extends AppCompatActivity {
             }
         });
 
-       map=((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
+        map=((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
         map.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-        CameraUpdate update= CameraUpdateFactory.newLatLngZoom(Location_Burnaby,14);
+        CameraUpdate update= CameraUpdateFactory.newLatLngZoom(Location_Burnaby, 14);
         map.animateCamera(update);
         //String turl = getIntent().getStringExtra("EXTRA_SESSION_ID");
 
@@ -143,7 +137,7 @@ public class MapActivity extends AppCompatActivity {
 
             // Placing a marker on the touched position
             map.addMarker(markerOptions);
-            Intent toAddBusinessActivity=new Intent(MapActivity.this,AddBusinessActivity.class);
+            Intent toAddBusinessActivity=new Intent(MapFamilyActivity.this,AddFamilyActivity.class);
             toAddBusinessActivity.putExtra("Adress", addressText);
             startActivity(toAddBusinessActivity);
 
